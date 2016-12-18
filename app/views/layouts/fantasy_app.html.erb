@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shine</title>
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">   
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag *webpack_asset_paths("application") %>  
+    
+</script> 
+</head>
+<header class="topbar">
+  <section class="container">
+    <button type="button" class="btn btn-lg btn-warning topbtn">LOGIN</button>
+    <button type="button" class="btn btn-lg btn-warning topbtn">SIGN UP</button>
+  </section>
+</header>
+<body>
+  <section class="main">
+    <section class="navigation_bar">
+        <nav class="navbar navbar-dropdown">
+          <div class="container">            
+            <img src="/assets/fantasy3.png" alt="fantasy_logo">
+            <ul class="nav nav-pills pull-right">
+              <li class="nav-item"><a class="nav-link link" href="#">HOME</a></li>
+              <li class="nav-item"><a class="nav-link link" href="#">ARTICLES</a></li>
+              <li class="nav-item"><a clas="nav-link link" href="#">POWER RANKINGS</a></li>
+              <li class="nav-item"><a class="nav-link link" href="#">FANTASY</a></li>
+              <li class="nav-item"><a class="nav-link link" href="#">PREMIUM ACCESS</a></li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+      <section id="mycarousel">
+          <div class="container">
+            <%= carousel_for(["/assets/carousel1.jpg","/assets/carousel2.jpg","/assets/carousel3.jpg","/assets/carousel4.jpg"]) %>
+          </div>
+        </section>
+        <section class="container">
+          <div class="row marketing headline">
+            <section class="col-lg-6">
+              <h1> New Articles </h1>
+              <article>
+                <h4> Power rankings for S3 are out now </h4>
+                <p> Ipsum grab'em by the pussy Trump FR, It US french military strike ALep Syria Lol CS GO Battlefield Test I like to Clinton Bernie Sanders OP</p>
+                <button type="button" class="btn btn-sm btn-warning rmbtn">Read More</button>
+              </article>
+              <article>
+                <h4> Power rankings for S3 are out now </h4>
+                <p> Ipsum grab'em by the pussy Trump FR, It US french military strike ALep Syria Lol CS GO Battlefield Test I like to Clinton Bernie Sanders OP</p>
+                <button type="button" class="btn btn-sm btn-warning rmbtn">Read More</button>
+              </article>            
+            </section>
+            <section class="col-lg-6">
+              <h1> Fantasy </h1>
+              <img src="assets/fantasy_img.jpg" alt="fantasy" id="fantasy_img">          
+            </section>
+          </div>
+        </section>
+      </section>
+    </body>
+</html>
